@@ -224,8 +224,8 @@ public class MainActivity extends Activity {
         Log.v(TAG, "onResume");
         try {
             if(mCamera == null){
-                mCamera = Camera.open(mCameraindex);
                 Log.i(TAG, "open camera :" + mCameraindex);
+                mCamera = Camera.open(mCameraindex);
             }
         } catch (Exception e) {
             // TODO: handle exception
@@ -305,6 +305,7 @@ public class MainActivity extends Activity {
         }
         if(mSurRecorder != null && isRecording == true){
             mSurRecorder.stopRecording();
+            mSurRecorder=null;
         }
 
         if (mCamera != null) {
@@ -316,7 +317,8 @@ public class MainActivity extends Activity {
             mCamera.release();
             mCamera=null;
         }
-        finish();
+
+        System.exit(0);
     }
 
     private int FindFrontCamera() {
