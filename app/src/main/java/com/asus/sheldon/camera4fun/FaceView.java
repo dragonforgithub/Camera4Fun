@@ -41,7 +41,7 @@ class FaceView extends ImageView {
         mFaceIndicator = getResources().getDrawable(R.drawable.ic_face_find_1);
         mLeftEye =  getResources().getDrawable(R.drawable.fire);
         mRightEye =  getResources().getDrawable(R.drawable.fire);
-        mMouth =  getResources().getDrawable(R.drawable.video1);
+        mMouth =  getResources().getDrawable(R.drawable.mouth);
         initPaint();
     }
 
